@@ -39,8 +39,9 @@ public class Test1 {
          //</editor-fold>
 
         //<editor-fold desc="Get URL">
-        driver.get("https://users.startribune.com/admin");
-        //driver.get("https://stage-users.startribune.com/admin");
+        //driver.get("https://users.startribune.com/admin");
+        //driver.get("https://stage.www.startribune.com/admin");
+        driver.get("https://stage-users.startribune.com/admin");
 
         //</editor-fold>
 
