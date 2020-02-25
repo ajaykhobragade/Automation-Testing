@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Test1 {
 
+    @Test
     public static void main(String[] args) throws InterruptedException, IOException {
 
         //<editor-fold desc="Get Chrome driver">
@@ -37,8 +39,8 @@ public class Test1 {
          //</editor-fold>
 
         //<editor-fold desc="Get URL">
-        //driver.get("https://users.startribune.com/admin");
-        driver.get("https://stage-users.startribune.com/admin");
+        driver.get("https://users.startribune.com/admin");
+        //driver.get("https://stage-users.startribune.com/admin");
 
         //</editor-fold>
 
