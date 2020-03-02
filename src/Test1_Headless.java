@@ -1,23 +1,24 @@
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
-public class Test1 {
+public class Test1_Headless {
 
     @Test
     public static void main(String[] args) throws InterruptedException, IOException {
 
-        //<editor-fold desc="Get Chrome driver">
+        //<editor-fold desc="Get Headless Chrome driver">
         System.setProperty("webdriver.chrome.driver", "chromedriver");
-        WebDriver driver=new ChromeDriver();
+
+        ChromeOptions options=new ChromeOptions();
+        options.setHeadless(true);
+        WebDriver driver=new ChromeDriver(options);
 
         /*driver.manage().window().setPosition(new Point(2000, 1));
         driver.manage().window().fullscreen();
@@ -122,7 +123,7 @@ public class Test1 {
         System.out.println(driver.getTitle());
         //</editor-fold>
 
-        driver.findElement(By.linkText(" Logout")).click(); //user will logout and returns to homepage
+        //driver.findElement(By.linkText(" Logout")).click(); //user will logout and returns to homepage
 
         System.out.println(driver.getTitle());
 
